@@ -4,6 +4,29 @@
 /* red = #ED303C */
 /* blue = #3B8183 */
 
+.normalText {
+  color: white;
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.largeText {
+  color: white;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.height167 {
+  height: 167px;
+}
+
+.unit {
+}
+
 #logo {
   margin:0 auto;
   display:block;
@@ -24,6 +47,13 @@
   -moz-animation-duration: 2.5s;
   animation-duration: 2.5s;
 }
+
+.butts {
+  margin:0 auto;
+  display:block;
+  font-size: 28px;
+}
+
 
 .get-started {
   margin:0 auto;
@@ -56,11 +86,12 @@ a {
 }
 
 .slide-container {
+  /*background: #83AF9B;*/
   height:auto;
-  min-height:450px;
+  min-height:500px;
   height:auto !important;
-  height:450px;
-  margin-top: 50px;
+  height:500px;
+  margin-top: 60px;
 }
 
 #grad {

@@ -17,6 +17,7 @@ function handlers() {
     $("#landing").css("display", "none")
     $(".course").removeClass("hidden");
     $(".course").addClass("animated fadeIn");
+    startSlideshow();
   });
 
   $("#poop").click(function(){
@@ -36,11 +37,18 @@ function handlers() {
     }
   });
 
-  $("#page-cantainer").hover(function(){
+  $("#page-container").hover(function(){
     if($("#menu-toggle-out").css("margin-left") == "150px"){
       $("#menu-toggle-out").animate({"margin-left": '-=150'});
       $("#side-nav").animate({"margin-left": '-=150'});
       $(".nav-link h5").removeClass("animated rubberBand");
     }
   });
+}
+
+function startSlideshow() {
+  var slides = $(".slide");
+  console.log(slides.length);
+  // var items = slides[0].find("#slide-item");
+  console.log(slides[0]);
 }
