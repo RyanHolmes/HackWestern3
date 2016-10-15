@@ -60,6 +60,7 @@ function createProgressBar() {
   var unit = "#unit" + currentUnit
   var unitSlidesArray = $(unit).data('slides').split(",");
   var numSlides = unitSlidesArray.length;
+  if (numSlides == 1) return;
   var htmlString = "";
 
   for(i = 1; i <= numSlides; i++) {
