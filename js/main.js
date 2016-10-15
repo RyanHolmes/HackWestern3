@@ -47,8 +47,16 @@ function handlers() {
 }
 
 function startSlideshow() {
-  var slides = $(".slide");
-  console.log(slides.length);
-  // var items = slides[0].find("#slide-item");
-  console.log(slides[0]);
+  $(".slide").each(function(i, obj) {
+    items = $(obj).find(".slide-item");
+    items.data("order");
+    items.sort(SortByName);
+    
+  });
+}
+
+function SortByName(a, b){
+  var aNum = parseInt($(a).data("order"));
+  var bNum = parseInt($(b).data("order"));
+  return aNum - bNum;
 }
