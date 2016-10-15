@@ -9,22 +9,16 @@ $(document).ready(function(){
   });
 
   $("#menu-toggle-out").hover(function(){
-    $(this).addClass("hidden");
-    $("#side-nav").removeClass("hidden");
-    $("#side-nav").addClass("stretchRight");
-    // $("#menu-toggle-in").removeClass("hidden");
+    if($(this).css("margin-left") == "0px"){
+      $(this).animate({"margin-left": '+=150'});
+      $("#side-nav").animate({"margin-left": '+=150'});
+    }
   });
 
   $("#page-cantainer").hover(function(){
-    // $(this).addClass("hidden");
-    $("#side-nav").removeClass("stretchRight");
-    $("#side-nav").addClass("hidden");
-    // $("#side-nav").animate({ "margin-left": '+=200' });
-    $("#menu-toggle-out").removeClass("hidden");
-    // window.setInterval(function(){
-      // $("#menu-toggle-in").addClass("hidden");
-    //   $("#menu-toggle-out").removeClass("hidden");
-    //   $("#menu-toggle-in").removeClass("hidden");
-    // }, 350);
+    if($("#menu-toggle-out").css("margin-left") == "150px"){
+      $("#menu-toggle-out").animate({"margin-left": '-=150'});
+      $("#side-nav").animate({"margin-left": '-=150'});
+    }
   });
 });

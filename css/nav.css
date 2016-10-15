@@ -1,7 +1,9 @@
 /* MENU BUTTON */
 #menu-toggle-out {
+  position: absolute;
+  margin-left: 0px;
   background: #2E2633;
-  color: #99173C;
+  color: #F5634A;
 }
 
 #menu-toggle-out:hover {
@@ -13,6 +15,8 @@
 #side-nav {
   background: #110c11;
   height:100vh;
+  width: 150px;
+  margin-left: -150px;
 }
 
 #side-nav ul {
@@ -31,7 +35,7 @@
 }
 
 .nav-link:hover {
-  color: #99173C;
+  color: #F5634A;
   background: #2e242c;
   cursor: pointer;
 }
