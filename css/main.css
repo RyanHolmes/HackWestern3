@@ -3,6 +3,7 @@
 /* darker orange = #F5634A */
 /* red = #ED303C */
 /* blue = #3B8183 */
+
 body {
   background: #3B8183;
 }
@@ -14,4 +15,18 @@ body {
   height:auto !important;
   height:400px;
   margin-top: 50px;
+}
+
+#side-nav {
+  background: #FF9C5B;
+  height:100vh;
+}
+
+#side-nav ul {
+  margin-left: 0px;
+  list-style: none;
+}
+
+#side-nav ul li{
+  margin-top: 0px;
 }

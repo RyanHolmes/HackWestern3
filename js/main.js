@@ -6,8 +6,16 @@ $(document).ready(function(){
     $("#slide2").addClass("expandUp");
   });
 
-  $("#menu-toggle").click(function(){
+  $("#menu-toggle-out").click(function(){
     $("#side-nav").removeClass("hidden");
     $("#side-nav").addClass("stretchRight");
+    $(this).addClass("hidden");
+  });
+
+  $("#menu-toggle-in").click(function(){
+    $("#side-nav").addClass("hidden");
+    $(this).addClass("hidden");
+    $("#menu-toggle-out").removeClass("hidden");
+    $("#menu-toggle-in").removeClass("hidden");
   });
 });
