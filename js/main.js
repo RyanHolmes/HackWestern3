@@ -6,15 +6,15 @@ $(document).ready(function(){
     $("#slide2").addClass("expandUp");
   });
 
-  $("#menu-toggle-out").click(function(){
+  $("#menu-toggle-out").hover(function(){
     $(this).addClass("hidden");
     $("#side-nav").removeClass("hidden");
     $("#side-nav").addClass("stretchRight");
-    $("#menu-toggle-in").removeClass("hidden");
+    // $("#menu-toggle-in").removeClass("hidden");
   });
 
-  $("#menu-toggle-in").click(function(){
-    $(this).addClass("hidden");
+  $("#page-cantainer").hover(function(){
+    // $(this).addClass("hidden");
     $("#side-nav").removeClass("stretchRight");
     $("#side-nav").addClass("hidden");
     // $("#side-nav").animate({ "margin-left": '+=200' });

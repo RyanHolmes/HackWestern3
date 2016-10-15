@@ -1,0 +1,54 @@
+/* MENU BUTTON */
+#menu-toggle-out {
+  background: #3F58A2;
+  color: #FF9C5B;
+}
+
+#menu-toggle-out:hover {
+  background: #3F58A2;
+  color: #FAD089;
+}
+
+/* NAVBAR */
+#side-nav {
+  background: #110c11;
+  height:100vh;
+}
+
+#side-nav ul {
+  padding-left: 0px;
+  padding-top: 0px;
+  margin-left: 0px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #C0C0B8;
+  background: #110c11;
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-top: 0px;
+}
+
+.nav-link:hover {
+  color: #1F86EB;
+  background: #2e242c;
+  cursor: pointer;
+}
+
+.nav-link a {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.nav-link:active {
+  background: green;
+}
+
+#nav-home {
+  background: #2e242c;
+  color: #1F86EB;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
