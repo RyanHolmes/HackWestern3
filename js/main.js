@@ -7,15 +7,22 @@ $(document).ready(function(){
   });
 
   $("#menu-toggle-out").click(function(){
+    $(this).addClass("hidden");
     $("#side-nav").removeClass("hidden");
     $("#side-nav").addClass("stretchRight");
-    $(this).addClass("hidden");
+    $("#menu-toggle-in").removeClass("hidden");
   });
 
   $("#menu-toggle-in").click(function(){
-    $("#side-nav").addClass("hidden");
     $(this).addClass("hidden");
+    $("#side-nav").removeClass("stretchRight");
+    $("#side-nav").addClass("hidden");
+    // $("#side-nav").animate({ "margin-left": '+=200' });
     $("#menu-toggle-out").removeClass("hidden");
-    $("#menu-toggle-in").removeClass("hidden");
+    // window.setInterval(function(){
+      // $("#menu-toggle-in").addClass("hidden");
+    //   $("#menu-toggle-out").removeClass("hidden");
+    //   $("#menu-toggle-in").removeClass("hidden");
+    // }, 350);
   });
 });
