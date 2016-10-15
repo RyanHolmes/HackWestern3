@@ -24,8 +24,8 @@ function handlers() {
   });
 
   $(".butts").click(function() {
-    var butts = $(".butts").data("transition");
     var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
+    var butts = $(slide.find(".butts")).data("transition");
     slide.addClass("animated");
     slide.addClass(slide.data("animate-out"));
     slide.addClass("hidden");
