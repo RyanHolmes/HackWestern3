@@ -1,7 +1,7 @@
 /* MENU BUTTON */
 #menu-toggle-out {
-  background: #3F58A2;
-  color: #FF9C5B;
+  background: #2E2633;
+  color: #99173C;
 }
 
 #menu-toggle-out:hover {
@@ -31,7 +31,7 @@
 }
 
 .nav-link:hover {
-  color: #1F86EB;
+  color: #99173C;
   background: #2e242c;
   cursor: pointer;
 }
@@ -39,10 +39,6 @@
 .nav-link a {
   text-align: left;
   padding-left: 10px;
-}
-
-.nav-link:active {
-  background: green;
 }
 
 #nav-home {

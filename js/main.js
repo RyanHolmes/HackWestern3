@@ -4,6 +4,8 @@ $(document).ready(function(){
     $("#slide1").addClass("hidden");
     $("#slide2").removeClass("hidden");
     $("#slide2").addClass("expandUp");
+    var snd = new Audio("../sounds/swoosh.mp3");
+    snd.play();
   });
 
   $("#menu-toggle-out").hover(function(){

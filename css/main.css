@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #3F58A2;
+  background: #2E2633;
 }
 
 a {
@@ -17,10 +17,10 @@ a {
 }
 
 .slide-container {
-  background: #FF9C5B;
+  background: #F5634A;
   height:auto;
-  min-height:400px;
+  min-height:450px;
   height:auto !important;
-  height:400px;
+  height:450px;
   margin-top: 50px;
 }
