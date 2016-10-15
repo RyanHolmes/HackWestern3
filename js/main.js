@@ -23,6 +23,10 @@ function handlers() {
     startSlideshow();
   });
 
+  $(".butts").click(function() {
+    //TODO: fadeout current slide
+  });
+
   // var snd = new Audio("../sounds/swoosh.mp3");
   // snd.play();
 
@@ -68,19 +72,20 @@ function startSlideshow() {
   //iterate slides
   createProgressBar();
   $(".slide").each(function(i, obj) {
-    items = $(obj).find(".slide-item");
+    var items = $(obj).find(".slide-item");
     items.data("order");
     items.sort(SortByName);
     //iterate items
+    var culminatingDelay = 0;
     items.each(function(j, val){
-      // animate-in, duration, delay, animate-out, duration
-      self = $(val);
-      animate = self.data("animation").split(" ");
-      // setTimeout(function () {
-        if(self.data("animation") == "none") {
+      // animate-in, duration, delay, animate-out
+      var self = $(val);
+      var animate = self.data("animation").split(" ");
+      setTimeout(function () {
+        if(animate[0] == "none") {
           self.removeClass("hidden");
         }
-        else if(self.data("animation") != "textillate" && self.data("animation") != "none"){
+        else if(animate[0] != "textillate" && animate[0] != "none"){
           self.addClass("animated");
           self.removeClass("hidden");
           self.addClass(animate[0]);
@@ -89,7 +94,8 @@ function startSlideshow() {
           self.removeClass("hidden");
           self.textillate();
         }
-      // }, parseInt(animate[2]) * 1000);
+      }, culminatingDelay + parseInt(animate[2]) * 1000);
+      culminatingDelay += parseInt(animate[2]) * 1000
     });
   });
 }
