@@ -45,15 +45,16 @@ function handlers() {
 
 function createProgressBar() {
 
-  var unitSlides = $(".unit").data(slides)
-  var htmlString = ""
-  for(i = 0; i < unitSlides; i++) {
+  var unitSlides = document.getElementById('unit1').dataset.slides;
+  var htmlString = "";
+
+  for(i = 1; i <= unitSlides; i++) {
     if (i <= currentSlide)
-      htmlString.append("<li class='completed'>");
+      htmlString += "<li class='completed'>";
     else
-      htmlString.append("<li>");
-    htmlString.append("<span class='bubble'></span>");
-    htmlString.append("</li>");
+      htmlString += "<li>";
+    htmlString += "<span class='bubble'></span>";
+    htmlString += "</li>";
   }
 
   $(".progress-indicator").html(htmlString);
@@ -62,6 +63,7 @@ function createProgressBar() {
 
 function startSlideshow() {
   //iterate slides
+  createProgressBar();
   $(".slide").each(function(i, obj) {
     items = $(obj).find(".slide-item");
     items.data("order");
