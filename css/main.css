@@ -20,11 +20,8 @@
   text-align: center;
 }
 
-.height155 {
-  height: 155px;
-}
-
-.unit {
+.height167 {
+  height: 167px;
 }
 
 #logo {
@@ -93,6 +90,7 @@ a {
   height:500px;
   margin-top: 60px;
 }
+
 
 #grad {
     background: #25b2bb; /* For browsers that do not support gradients */
