@@ -24,13 +24,24 @@ function handlers() {
   });
 
   $(".butts").click(function() {
+    var butts = $(".butts").data("transition");
     var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
     slide.addClass("animated");
     slide.addClass(slide.data("animate-out"));
     slide.addClass("hidden");
-    currentSlide += 1;
-    var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
-    slide.removeClass("hidden");
+    if(butts == "slide"){
+      currentSlide += 1;
+      var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
+      slide.removeClass("hidden");
+    }
+    else {
+      var unit = $($(".unit")[currentUnit - 1]);
+      unit.addClass("hidden");
+      currentSlide = 1;
+      currentUnit += 1;
+      var unit = $($(".unit")[currentUnit - 1]);
+      unit.removeClass("hidden");
+    }
     nextSlide();
   });
 
