@@ -45,10 +45,13 @@ function handlers() {
 
 function createProgressBar() {
 
-  var unitSlides = document.getElementById('unit1').dataset.slides;
+  $(".progress-indicator").html('');
+  var unit = "#unit" + currentUnit
+  var unitSlidesArray = $(unit).data('slides').split(",");
+  var numSlides = unitSlidesArray.length;
   var htmlString = "";
 
-  for(i = 1; i <= unitSlides; i++) {
+  for(i = 1; i <= numSlides; i++) {
     if (i <= currentSlide)
       htmlString += "<li class='completed'>";
     else
