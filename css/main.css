@@ -1,0 +1,17 @@
+/* yellow = #FAD089*/
+/* orange = #FF9C5B */
+/* darker orange = #F5634A */
+/* red = #ED303C */
+/* blue = #3B8183 */
+body {
+  background: #3B8183;
+}
+
+.slide-container {
+  background: #ED303C;
+  height:auto;
+  min-height:300px;
+  height:auto !important;
+  height:300px;
+  margin-top: 100px;
+}
