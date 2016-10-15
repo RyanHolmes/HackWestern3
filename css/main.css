@@ -16,12 +16,18 @@
   font-family: 'Lato', sans-serif;
 }
 
+.dosisText {
+  color: white;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+}
+
 .textcenter {
   text-align: center;
 }
 
-.height167 {
-  height: 167px;
+.height155 {
+  height: 155px;
 }
 
 #logo {
