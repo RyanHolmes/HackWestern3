@@ -20,11 +20,12 @@ function handlers() {
     $("#landing").css("display", "none")
     $(".course").removeClass("hidden");
     // $(".course").addClass("animated fadeIn");
-    startSlideshow();
+    nextSlide();
   });
 
   $(".butts").click(function() {
-    //TODO: fadeout current slide
+    // var slides = $(".slide");
+    // var currentSlide = $(slides)
   });
 
   // var snd = new Audio("../sounds/swoosh.mp3");
@@ -65,7 +66,7 @@ function createProgressBar() {
 
 }
 
-function startSlideshow() {
+function nextSlide() {
   //iterate slides
   createProgressBar();
   $(".slide").each(function(i, obj) {
