@@ -24,8 +24,14 @@ function handlers() {
   });
 
   $(".butts").click(function() {
-    // var slides = $(".slide");
-    // var currentSlide = $(slides)
+    var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
+    slide.addClass("animated");
+    slide.addClass(slide.data("animate-out"));
+    slide.addClass("hidden");
+    currentSlide += 1;
+    var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
+    slide.removeClass("hidden");
+    nextSlide();
   });
 
   // var snd = new Audio("../sounds/swoosh.mp3");
@@ -72,32 +78,32 @@ function createProgressBar() {
 function nextSlide() {
   //iterate slides
   createProgressBar();
-  $(".slide").each(function(i, obj) {
-    var items = $(obj).find(".slide-item");
-    items.data("order");
-    items.sort(SortByName);
-    //iterate items
-    var culminatingDelay = 0;
-    items.each(function(j, val){
-      // animate-in, duration, delay, animate-out
-      var self = $(val);
-      var animate = self.data("animation").split(" ");
-      setTimeout(function () {
-        if(animate[0] == "none") {
-          self.removeClass("hidden");
-        }
-        else if(animate[0] != "textillate" && animate[0] != "none"){
-          self.addClass("animated");
-          self.removeClass("hidden");
-          self.addClass(animate[0]);
-        }
-        else {
-          self.removeClass("hidden");
-          self.textillate();
-        }
-      }, culminatingDelay + parseInt(animate[2]) * 1000);
-      culminatingDelay += parseInt(animate[2]) * 1000
-    });
+  var slide = $($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1];
+
+  var items = $(slide).find(".slide-item");
+  items.data("order");
+  items.sort(SortByName);
+  //iterate items
+  var culminatingDelay = 0;
+  items.each(function(j, val){
+    // animate-in, duration, delay, animate-out
+    var self = $(val);
+    var animate = self.data("animation").split(" ");
+    setTimeout(function () {
+      if(animate[0] == "none") {
+        self.removeClass("hidden");
+      }
+      else if(animate[0] != "textillate" && animate[0] != "none"){
+        self.addClass("animated");
+        self.removeClass("hidden");
+        self.addClass(animate[0]);
+      }
+      else {
+        self.removeClass("hidden");
+        self.textillate();
+      }
+    }, culminatingDelay + parseInt(animate[2]) * 1000);
+    culminatingDelay += parseInt(animate[2]) * 1000
   });
 }
 
