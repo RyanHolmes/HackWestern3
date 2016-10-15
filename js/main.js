@@ -1,4 +1,24 @@
 $(document).ready(function(){
+  init();
+  handlers();
+});
+
+
+function init() {
+  $("#title").textillate();
+  $("#logo").addClass("animated fadeIn");
+  $("#slogan").addClass("animated fadeIn");
+  $("#get-started").addClass("animated fadeInDown");
+}
+
+function handlers() {
+  $("#get-started").click(function(){
+    $("#landing").addClass("animated fadeOut");
+    $("#landing").css("display", "none")
+    $(".course").removeClass("hidden");
+    $(".course").addClass("animated fadeIn");
+  });
+
   $("#poop").click(function(){
     // TODO needs to be array of jquery obects with a counter
     $("#slide1").addClass("hidden");
@@ -12,6 +32,7 @@ $(document).ready(function(){
     if($(this).css("margin-left") == "0px"){
       $(this).animate({"margin-left": '+=150'});
       $("#side-nav").animate({"margin-left": '+=150'});
+      $(".nav-link h5").addClass("animated rubberBand");
     }
   });
 
@@ -19,6 +40,7 @@ $(document).ready(function(){
     if($("#menu-toggle-out").css("margin-left") == "150px"){
       $("#menu-toggle-out").animate({"margin-left": '-=150'});
       $("#side-nav").animate({"margin-left": '-=150'});
+      $(".nav-link h5").removeClass("animated rubberBand");
     }
   });
-});
+}

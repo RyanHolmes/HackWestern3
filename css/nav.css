@@ -2,13 +2,13 @@
 #menu-toggle-out {
   position: absolute;
   margin-left: 0px;
-  background: #2E2633;
-  color: #F5634A;
+  background: rgba(0,0,0,0);
+  color: white;
 }
 
 #menu-toggle-out:hover {
-  background: #3F58A2;
-  color: #FAD089;
+  background: rgba(0,0,0,0);
+  color: white;
 }
 
 /* NAVBAR */
@@ -27,7 +27,7 @@
 }
 
 .nav-link {
-  color: #C0C0B8;
+  color: #D5D0D7;
   background: #110c11;
   padding-top:15px;
   padding-bottom:15px;
@@ -35,19 +35,20 @@
 }
 
 .nav-link:hover {
-  color: #F5634A;
+  color: #25b2bb;
   background: #2e242c;
   cursor: pointer;
 }
 
 .nav-link a {
+  font-family: 'Dosis', sans-serif;
   text-align: left;
   padding-left: 10px;
 }
 
 #nav-home {
   background: #2e242c;
-  color: #1F86EB;
+  color: #25b2bb;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
