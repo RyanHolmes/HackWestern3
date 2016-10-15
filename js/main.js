@@ -1,3 +1,6 @@
+var currentUnit = 1
+var currentSlide = 1
+
 $(document).ready(function(){
   init();
   handlers();
@@ -44,6 +47,23 @@ function handlers() {
       $(".nav-link h5").removeClass("animated rubberBand");
     }
   });
+}
+
+function createProgressBar() {
+
+  var unitSlides = $(".unit").data(slides)
+  var htmlString = ""
+  for(i = 0; i < unitSlides; i++) {
+    if (i <= currentSlide)
+      htmlString.append("<li class='completed'>");
+    else
+      htmlString.append("<li>");
+    htmlString.append("<span class='bubble'></span>");
+    htmlString.append("</li>");
+  }
+
+  $(".progress-indicator").html(htmlString);
+
 }
 
 function startSlideshow() {

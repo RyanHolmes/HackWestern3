@@ -62,7 +62,8 @@
     background-color: white;
     display: block;
     margin: 0 auto .5em;
-    border-bottom: 1px solid white
+    border-bottom: 1px solid #696969
+    /*this is the inactive bubbles */
 }
 
 .progress-indicator>li .bubble:after,
@@ -74,13 +75,15 @@
     height: 3px;
     content: '';
     background-color: white
+     /*this is the horizontal line */
 }
 
 .progress-indicator>li.completed .bubble,
 .progress-indicator>li.completed .bubble:after,
 .progress-indicator>li.completed .bubble:before {
-    background-color: blue;
-    border-color: #247830
+    background-color: #A9A9A9;
+    border-color: #696969
+    /*these are the completed bubbles */
 }
 
 .progress-indicator>li .bubble:before {
