@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
@@ -18,12 +19,38 @@
   </head>
 
   <body>
-    <button id="poop">poop</button>
-    <div id="slide1" class="slide-container col-md-6 col-md-offset-3 slideUp">
 
-    </div>
-    <div id="slide2" class="slide-container col-md-6 col-md-offset-3 hidden">
+    <div class="row">
+      <!-- NAVIGATION -->
+      <div class="col-md-2">
+        <!-- MENU BUTTON -->
+        <button id="menu-toggle" class="btn" style="background: black;">
+          <i style="color: white;" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+        <div id="side-nav" class="hidden">
+          <ul style="list-style: none;">
+            <li>link1</li>
+            <li>link2</li>
+            <li>link3</li>
+            <li>link4</li>
+            <li>link5</li>
+          </ul>
+        </div>
+      </div>
 
+      <!-- SLIDES -->
+      <div class=col-md-8>
+        <div class="row">
+          <button id="poop">poop</button>
+          <div id="slide1" class="slide-container slideUp">
+            <!-- content -->
+          </div>
+          <div id="slide2" class="slide-container hidden">
+            <!-- content -->
+          </div>
+        </div>
+      </div>
     </div>
+
   </body>
 </html>
