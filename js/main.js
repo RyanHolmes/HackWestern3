@@ -65,7 +65,6 @@ function createProgressBar() {
   }
 
   $(".progress-indicator").html(htmlString);
-
 }
 
 function startSlideshow() {
