@@ -16,18 +16,12 @@ function handlers() {
     $("#landing").addClass("animated fadeOut");
     $("#landing").css("display", "none")
     $(".course").removeClass("hidden");
-    $(".course").addClass("animated fadeIn");
+    // $(".course").addClass("animated fadeIn");
     startSlideshow();
   });
 
-  $("#poop").click(function(){
-    // TODO needs to be array of jquery obects with a counter
-    $("#slide1").addClass("hidden");
-    $("#slide2").removeClass("hidden");
-    $("#slide2").addClass("expandUp");
-    var snd = new Audio("../sounds/swoosh.mp3");
-    snd.play();
-  });
+  // var snd = new Audio("../sounds/swoosh.mp3");
+  // snd.play();
 
   $("#menu-toggle-out").hover(function(){
     if($(this).css("margin-left") == "0px"){
@@ -47,11 +41,31 @@ function handlers() {
 }
 
 function startSlideshow() {
+  //iterate slides
   $(".slide").each(function(i, obj) {
     items = $(obj).find(".slide-item");
     items.data("order");
     items.sort(SortByName);
-    
+    //iterate items
+    items.each(function(j, val){
+      // animate-in, duration, delay, animate-out, duration
+      self = $(val);
+      animate = self.data("animation").split(" ");
+      // setTimeout(function () {
+        if(self.data("animation") == "none") {
+          self.removeClass("hidden");
+        }
+        else if(self.data("animation") != "textillate" && self.data("animation") != "none"){
+          self.addClass("animated");
+          self.removeClass("hidden");
+          self.addClass(animate[0]);
+        }
+        else {
+          self.removeClass("hidden");
+          self.textillate();
+        }
+      // }, parseInt(animate[2]) * 1000);
+    });
   });
 }
 
@@ -60,3 +74,7 @@ function SortByName(a, b){
   var bNum = parseInt($(b).data("order"));
   return aNum - bNum;
 }
+
+// function nextSlide() {
+
+// }
