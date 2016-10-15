@@ -1,3 +1,6 @@
+var currentUnit = 1
+var currentSlide = 1
+
 $(document).ready(function(){
   init();
   handlers();
@@ -44,8 +47,27 @@ function handlers() {
   });
 }
 
+function createProgressBar() {
+
+  var unitSlides = document.getElementById('unit1').dataset.slides;
+  var htmlString = "";
+
+  for(i = 1; i <= unitSlides; i++) {
+    if (i <= currentSlide)
+      htmlString += "<li class='completed'>";
+    else
+      htmlString += "<li>";
+    htmlString += "<span class='bubble'></span>";
+    htmlString += "</li>";
+  }
+
+  $(".progress-indicator").html(htmlString);
+
+}
+
 function startSlideshow() {
   //iterate slides
+  createProgressBar();
   $(".slide").each(function(i, obj) {
     var items = $(obj).find(".slide-item");
     items.data("order");
