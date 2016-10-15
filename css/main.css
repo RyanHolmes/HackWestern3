@@ -10,6 +10,12 @@
   font-family: "Lato", Times, serif;
 }
 
+.normalText2 {
+  color: white;
+  font-size: 20px;
+  font-family: "Tahoma", Geneva, sans-serif;
+}
+
 .largeText {
   color: white;
   font-size: 40px;
@@ -29,6 +35,11 @@
 .height155 {
   height: 155px;
 }
+
+.height35 {
+  height: 35px;
+}
+
 
 #logo {
   margin:0 auto;
