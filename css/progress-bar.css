@@ -81,8 +81,8 @@
 .progress-indicator>li.completed .bubble,
 .progress-indicator>li.completed .bubble:after,
 .progress-indicator>li.completed .bubble:before {
-    background-color: #A9A9A9;
-    border-color: #696969
+    background-color: #6f459b;  /* f29f19 A9A9A9 */
+    border-color: #696969;
     /*these are the completed bubbles */
 }
 

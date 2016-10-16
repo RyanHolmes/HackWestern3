@@ -30,6 +30,10 @@
   height: 100px;
 }
 
+.height80 {
+  height: 80px;
+}
+
 .exLargeText {
   color: white;
   font-size: 56px;
@@ -147,6 +151,16 @@ a {
   height:auto !important;
   height:500px;
   margin-top: 60px;
+}
+
+.slide-container2 {
+  /*background: #83AF9B;*/
+  height:auto;
+  min-height:500px;
+  max-height:500px;
+  height:auto !important;
+  height:500px;
+  margin-top: 30px;
 }
 
 
