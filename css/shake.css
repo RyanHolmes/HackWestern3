@@ -1,0 +1,33 @@
+.treeLeaves {
+    /*width:375px;*/
+    /*height:375px;*/
+    z-index:5;
+    position:absolute;
+
+
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+
+    -webkit-animation: leaves 1.5s ease-in-out infinite alternate;
+    animation: leaves 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes leaves {
+    0% {
+        -webkit-transform: scaleX(1.0);
+    }
+    100% {
+        -webkit-transform: scaleX(1.2);
+    }
+}
+
+@keyframes leaves {
+    0% {
+        transform: scaleX(1.0);
+    }
+    100% {
+        transform: scaleX(1.2);
+    }
+}

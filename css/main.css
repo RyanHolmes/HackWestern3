@@ -4,6 +4,18 @@
 /* red = #ED303C */
 /* blue = #3B8183 */
 
+.path {
+  stroke-dasharray: 50;
+  animation: dash 10s linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
 #progress-stuff {
   position: absolute;
   bottom: -50px;
