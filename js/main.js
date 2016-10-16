@@ -40,7 +40,9 @@ function handlers() {
       currentSlide = 1;
       currentUnit += 1;
       var unit = $($(".unit")[currentUnit - 1]);
+      var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
       unit.removeClass("hidden");
+      slide.removeClass("hidden");
     }
     nextSlide();
   });
@@ -90,7 +92,8 @@ function nextSlide() {
   //iterate slides
   createProgressBar();
   var slide = $($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1];
-
+  // slide.removeClass("hidden");
+  console.log(slide);
   var items = $(slide).find(".slide-item");
   items.data("order");
   items.sort(SortByName);

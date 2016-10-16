@@ -4,6 +4,12 @@
 /* red = #ED303C */
 /* blue = #3B8183 */
 
+.exLargeText {
+  color: white;
+  font-size: 56px;
+  font-family: 'Lato', sans-serif;
+}
+
 .normalText {
   color: white;
   font-size: 28px;
@@ -18,7 +24,7 @@
 
 .largeText {
   color: white;
-  font-size: 40px;
+  font-size: 36px;
   font-family: 'Lato', sans-serif;
 }
 
@@ -26,6 +32,12 @@
   color: white;
   text-align: center;
   font-family: 'Dosis', sans-serif;
+}
+
+.latoText {
+  color: white;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .textcenter {
