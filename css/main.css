@@ -4,6 +4,20 @@
 /* red = #ED303C */
 /* blue = #3B8183 */
 
+#progress-stuff {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+}
+
+.height360 {
+  height: 360px;
+}
+
+.height100 {
+  height: 100px;
+}
+
 .exLargeText {
   color: white;
   font-size: 56px;
@@ -78,6 +92,8 @@
   margin:0 auto;
   display:block;
   font-size: 28px;
+  /*position: absolute;*/
+  /*bottom: 20px;*/
 }
 
 
@@ -115,6 +131,7 @@ a {
   /*background: #83AF9B;*/
   height:auto;
   min-height:500px;
+  max-height:500px;
   height:auto !important;
   height:500px;
   margin-top: 60px;

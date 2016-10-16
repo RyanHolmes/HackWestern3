@@ -92,8 +92,6 @@ function nextSlide() {
   //iterate slides
   createProgressBar();
   var slide = $($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1];
-  // slide.removeClass("hidden");
-  console.log(slide);
   var items = $(slide).find(".slide-item");
   items.data("order");
   items.sort(SortByName);
