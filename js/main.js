@@ -29,6 +29,8 @@ function handlers() {
     slide.addClass("animated");
     slide.addClass(slide.data("animate-out"));
     slide.addClass("hidden");
+    slide.removeClass("animated");
+    slide.removeClass(slide.data("animate-out"));
     if(butts == "slide"){
       currentSlide += 1;
       var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
@@ -45,6 +47,43 @@ function handlers() {
       slide.removeClass("hidden");
     }
     nextSlide();
+  });
+
+  $('.nav-link').click(function(){
+
+      var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
+      var unit = $($(".unit")[currentUnit - 1]);
+      // slide.addClass("animated");
+      // slide.addClass(slide.data("animate-out"));
+      slide.addClass("hidden");
+      unit.addClass("hidden");
+      // slide.removeClass("animated");
+      // slide.removeClass(slide.data("animate-out"));
+
+      console.log(slide);
+      console.log(unit);
+
+      buttonId = $(this).attr("id");
+      currentSlide = 1;
+
+      console.log(buttonId);
+
+      if (buttonId == "nav-intro") { currentUnit = 1; }
+      else if (buttonId == "nav-budgeting") { currentUnit = 2; }
+      else if (buttonId == "nav-debt") { currentUnit = 3; }
+      else if (buttonId == "nav-saving") { currentUnit = 4; }
+      else if (buttonId == "nav-investing") { currentUnit = 5; }
+      else if (buttonId == "nav-life") { currentUnit = 6; }
+      else {}
+
+      var slide = $($($(".unit")[currentUnit - 1]).find(".slide")[currentSlide - 1]);
+      var unit = $($(".unit")[currentUnit - 1]);
+      unit.removeClass("hidden");
+      slide.removeClass("hidden");
+      // slide.addClass("animated");
+
+      nextSlide();
+
   });
 
   // var snd = new Audio("../sounds/swoosh.mp3");
