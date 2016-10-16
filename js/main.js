@@ -68,7 +68,6 @@ function handlers() {
 }
 
 function createProgressBar() {
-
   $(".progress-indicator").html('');
   var unit = "#unit" + currentUnit
   var unitSlidesArray = $(unit).data('slides').split(",");
@@ -95,6 +94,8 @@ function nextSlide() {
   var items = $(slide).find(".slide-item");
   items.data("order");
   items.sort(SortByName);
+  console.log(slide)
+  console.log(items.length)
   //iterate items
   var culminatingDelay = 0;
   items.each(function(j, val){
